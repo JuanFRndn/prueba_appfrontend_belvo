@@ -1,0 +1,383 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.bank-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loading-indicator,
+.no-results {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.error-message {
+  background-color: #242424;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  color: #d32f2f;
+}
+
+.retry-button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.bank-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bank-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-bottom: 1px solid #747bff;
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  padding: 8px 16px;
+  border: 1px solid #747bff;
+  background-color: #242424;
+  cursor: pointer;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos generales */
+.bank-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Lista de bancos */
+.bank-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bank-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #747bff;
+  border-radius: 8px;
+}
+
+.bank-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.bank-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.bank-country {
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Botones */
+.connect-button,
+.primary-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.connect-button:hover,
+.primary-button:hover {
+  background-color: #0056b3;
+}
+
+.secondary-button,
+.back-button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* Formulario */
+.credentials-form {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* Cuentas bancarias */
+.account-list {
+  list-style: none;
+  padding: 0;
+}
+
+.account-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #747bff;
+  border-radius: 8px;
+}
+
+.account-name {
+  font-weight: bold;
+}
+
+.account-balance {
+  font-size: 1.2em;
+  margin: 5px 0;
+  color: black;
+}
+
+/* Estados */
+.loading-indicator {
+  text-align: center;
+  padding: 20px;
+  color: #6c757d;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Paginación */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #747bff;
+}
+
+.header_logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.header_nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.header_logout-btn {
+  padding: 0.5rem 1rem;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.header_logout-btn:hover {
+  background: #cc0000;
+}
+/* Estilos generales para tablas */
+.tabla-estilizada {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+}
+
+/* Estilo para las celdas de encabezado */
+.tabla-estilizada thead th {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  padding: 12px 15px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilo para las celdas de datos */
+.tabla-estilizada tbody td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #dddddd;
+  transition: all 0.3s;
+}
+
+/* Estilo para filas pares (zebra striping) */
+.tabla-estilizada tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para el pie de tabla */
+.tabla-estilizada tfoot td {
+  padding: 10px 15px;
+  font-style: italic;
+  background-color: #f1f1f1;
+  border-top: 2px solid #3498db;
+}
+
+/* Estilo para bordes */
+.tabla-estilizada,
+.tabla-estilizada th,
+.tabla-estilizada td {
+  border: none;
+}
+
+/* Estilo para celdas con colspan */
+.tabla-estilizada td[colspan] {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Estilo para tablas responsivas */
+.contenedor-tabla {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
